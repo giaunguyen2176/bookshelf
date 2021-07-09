@@ -222,7 +222,7 @@ function Bookshelf(knex) {
      *    Bookshelf~transactionCallback transactionCallback}.
      */
     transaction() {
-      return this.knex.transaction.apply(this, arguments);
+      return this.knex.transaction.apply(this.knex, arguments);
     },
 
     /**
